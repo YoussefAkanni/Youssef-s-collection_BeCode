@@ -39,16 +39,39 @@ article {
   border-radius: 15px;
 }
 
+article:hover {
+  box-shadow: 1px 1px 10px 5px rgba(148, 59, 250, 0.788);
+}
+
 article img {
   width: 100%;
   border-start-start-radius: 12px;
   border-top-right-radius: 12px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 20px;
+  min-height: 450px;
+}
+
+a {
+  text-decoration: none;
+  text-transform: none;
+  color: whitesmoke;
+}
+
+a::after {
+  text-decoration: none;
+  text-transform: none;
+  color: whitesmoke;
+}
+
+.lien:hover {
+  transition: 400ms;
+  transform: scale(1.1);
 }
 
 .block {
-  margin: 20px;
+  margin: 10px;
+  padding-bottom: 10px;
 }
 
 h1 {

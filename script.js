@@ -56,6 +56,25 @@ const collection = [
       "Le jeu se déroule ainsi alternativement à deux époques différentes : une partie où on joue David Mason (en 2025) accompagné de ses coéquipiers et amis Salazar et Harper, où ils doivent tenter de déjouer les plans de Menendez; et une partie où Woods raconte à David Mason comment son père l'a sauvé, et narre également les missions où ils étaient supposés capturer Menendez au début de son ascension dans les années 1980.",
     image: "images/BO2.jpg",
   },
+  {
+    title: "CS GO",
+    studio: "Valve Corporation",
+    category: [
+      {
+        Name: "FPS",
+      },
+      {
+        Name: "Competition",
+      },
+    ],
+    Link: "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
+    descrprion:
+      "Counter-Strike: Global Offensive (abrégé CS:GO) est un jeu de tir à la première personne multijoueur en ligne basé sur le jeu d'équipe développé par Valve Corporation. Il est sorti le 21 août 2012 ",
+
+    synopsis:
+      "CS GO est un jeu de tir compétitif ou 5 antiterroriste doivent défendre 2 sites contre 5 terroristes qui eux doivent planter la bombe sur un des deux sites et la protéger le temps qu'elle explose. Il y a une économie dans le jeu ou si tu gagnes la manche tu reçois plus d’argent pour t'acheter un meilleur équipement. ",
+    image: "images/CSGO.jpg",
+  },
 
   {
     title: "League of Legends",
@@ -198,6 +217,8 @@ const collection = [
 let main = document.querySelector("main");
 for (const game of collection) {
   let article = document.createElement("article");
+  let articleClick = document.createElement("div");
+  articleClick.className = "articleClick";
   let block = document.createElement("div");
   block.className = "block";
   let images = document.createElement("img");
@@ -209,6 +230,7 @@ for (const game of collection) {
   let doubleTag = document.createElement("div");
   doubleTag.className = "tag";
   let gameLink = document.createElement("a");
+  gameLink.className = "lien";
 
   gameName.textContent += game.title;
   studioName.textContent += game.studio;
@@ -216,19 +238,20 @@ for (const game of collection) {
   synopsisGame.textContent += game.synopsis;
   gameLink.href = game.Link;
 
-  main.appendChild(article);
+  main.appendChild(gameLink);
+  gameLink.appendChild(articleClick);
+  articleClick.appendChild(article);
   article.appendChild(images);
   article.appendChild(block);
   block.appendChild(gameName);
   block.appendChild(studioName);
   block.appendChild(descriptionGame);
   block.appendChild(synopsisGame);
-
-  block.appendChild(gameLink);
   for (const genre of game.category) {
     let tag = document.createElement("p");
     tag.textContent += genre.Name;
+
     doubleTag.appendChild(tag);
-    article.appendChild(doubleTag);
+    block.appendChild(doubleTag);
   }
 }
