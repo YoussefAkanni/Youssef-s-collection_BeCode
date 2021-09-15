@@ -4,7 +4,7 @@ body {
   font-family: ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   max-width: 100%;
-  background-color: rgb(41, 41, 41);
+  background-color: rgb(24, 24, 24);
   color: whitesmoke;
 }
 
@@ -13,8 +13,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 20px;
-  padding: 10px;
+  margin: 50px 10px;
 }
 
 header img {
@@ -27,6 +26,48 @@ header img {
   margin: 10px 20px;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  display: block;
+  width: 300px;
+  margin: 25px;
+  box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+}
+
+article img {
+  width: 100%;
+  border-start-start-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 20px;
+}
+
+.block {
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.tag {
+  display: flex;
+  margin: 10px;
+  justify-content: right;
+}
+
+.tag p {
+  background-color: rgb(98, 0, 255);
+  margin: 10px;
+  padding: 5px;
+  border-radius: 15px;
+}
+
 @media screen and (max-width: 768px) {
   header {
     display: flex;
@@ -35,5 +76,9 @@ header img {
 
   .info {
     line-height: normal;
+  }
+
+  main {
+    justify-content: center;
   }
 }
