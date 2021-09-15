@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-size: 16;
+  font-family: ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  max-width: 100%;
+  background-color: rgb(41, 41, 41);
+  color: whitesmoke;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+}
+
+.info {
+  line-height: 10px;
+  margin: 10px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info {
+    line-height: normal;
+  }
+}
