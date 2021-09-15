@@ -29,6 +29,9 @@ header img {
 main {
   display: flex;
   flex-wrap: wrap;
+  max-width: 80%;
+  justify-content: center;
+  margin: auto;
 }
 
 article {
@@ -103,5 +106,6 @@ h1 {
 
   main {
     justify-content: center;
+    min-width: 100%;
   }
 }
