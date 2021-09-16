@@ -204,16 +204,6 @@ const collection = [
   },
 ];
 
-// for (let i = 0; i < 10; i++) {
-//   let main = document.querySelector("main");
-//   let article = document.createElement("article");
-//   let images = document.createElement("img");
-//   images.src = collection[i].image;
-
-//   main.appendChild(article);
-//   article.appendChild(images);
-// }
-
 let main = document.querySelector("main");
 for (const game of collection) {
   let article = document.createElement("article");
